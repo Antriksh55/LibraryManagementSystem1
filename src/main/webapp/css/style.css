@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg: #0b0f1a;
+    --card: #141a2b;
+    --accent: #00e5ff;
+    --accent2: #7c7cff;
+    --text: #e6e9f0;
+    --muted: #9aa4bf;
+    --success: #19c37d;
+    --danger: #ff4d4f;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at top, #121a35, var(--bg));
+    color: var(--text);
+}
+
+/* NAVBAR */
+.navbar {
+    height: 70px;
+    background: linear-gradient(180deg, #0f152b, #0b0f1a);
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.6);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.nav-links {
+    margin-left: auto;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* PAGE */
+.container {
+    padding: 60px 80px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero h1 {
+    font-size: 46px;
+}
+
+.hero span {
+    color: var(--accent);
+}
+
+.hero p {
+    color: var(--muted);
+}
+
+/* CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 25px;
+}
+
+.card {
+    background: linear-gradient(145deg, #141a2b, #0f152b);
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.6);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(0,0,0,.9);
+}
+
+.card h3 {
+    margin: 0;
+}
+
+.status {
+    margin-top: 12px;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.available { background: #103f2e; color: var(--success); }
+.borrowed { background: #401515; color: var(--danger); }
+
+/* BUTTON */
+.btn {
+    margin-top: 15px;
+    padding: 12px 18px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* FORMS */
+.form-box {
+    max-width: 420px;
+    margin: auto;
+    background: var(--card);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    margin-top: 14px;
+    border-radius: 12px;
+    background: #0b1022;
+    border: none;
+    color: white;
+}
+.timeline {
+    margin-top: 30px;
+}
+
+.card {
+    display: flex;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    animation: fadeUp 0.4s ease;
+}
+
+.card-left {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-top: 8px;
+}
+
+.dot.borrowed {
+    background: #a855f7;
+}
+
+.dot.returned {
+    background: #22c55e;
+}
+
+.card-content h3 {
+    margin: 0;
+    color: #e5e7eb;
+}
+
+.card-content p {
+    margin: 6px 0;
+    color: #9ca3af;
+}
+
+.status {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.status.borrowed {
+    background: rgba(168,85,247,0.2);
+    color: #a855f7;
+}
+
+.status.available {
+    background: rgba(34,197,94,0.2);
+    color: #22c55e;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* PAGE */
+.page {
+    max-width: 520px;
+    margin: 60px auto;
+    color: #e5e7eb;
+}
+
+/* TITLES */
+.page-title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.highlight {
+    color: #38bdf8;
+}
+
+.subtitle {
+    opacity: 0.7;
+    margin-bottom: 30px;
+}
+
+/* CARD */
+.card {
+    background: linear-gradient(145deg, #111827, #020617);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 0 40px rgba(56,189,248,0.15);
+}
+
+/* FORM */
+label {
+    display: block;
+    margin: 15px 0 6px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    background: #020617;
+    border: 1px solid #1e293b;
+    color: white;
+}
+
+/* PREVIEW */
+.preview-card {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    padding: 15px;
+    background: linear-gradient(145deg, #0f172a, #020617);
+    border-radius: 12px;
+    align-items: center;
+}
+
+.preview-icon {
+    font-size: 36px;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 4px 10px;
+    background: #22c55e;
+    color: black;
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+/* BUTTON */
+.btn.primary {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #06b6d4, #8b5cf6);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* UTIL */
+.hidden {
+    display: none;
+}
+
+
+/*new*/
+
+.page-container {
+    padding: 40px;
+}
+
+.page-header h1 {
+    font-size: 28px;
+    color: #fff;
+}
+
+.page-header p {
+    color: #9aa4b2;
+    margin-bottom: 25px;
+}
+
+.glass-table {
+    background: rgba(255,255,255,0.05);
+    border-radius: 14px;
+    padding: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+thead th {
+    text-align: left;
+    padding: 14px;
+    font-size: 13px;
+    color: #9aa4b2;
+    text-transform: uppercase;
+}
+
+tbody td {
+    padding: 14px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+tbody tr:hover {
+    background: rgba(255,255,255,0.04);
+}
+
+.title {
+    font-weight: 600;
+}
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge.available {
+    background: #0f5132;
+    color: #2cff9d;
+}
+
+.badge.borrowed {
+    background: #5a1a1a;
+    color: #ff5c5c;
+}
